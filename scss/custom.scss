@@ -1,0 +1,144 @@
+$primary: #4f4c52;
+$secondary: #88838c;
+$success: #c7a492;
+$info: #543c1e;
+$warning: #a67b69;
+$danger: #815244;
+$light: #e5d5cf;
+$dark: #221e20;
+
+$body-bg: $light;
+
+@font-face {
+  font-family: "RobotoSlab";
+  src: url(../fonts/RobotoSlab-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoSlab";
+  src: url(../fonts/RobotoSlab-Light.ttf);
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoSlab";
+  src: url(../fonts/RobotoSlab-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url(../fonts/OpenSans-ExtraBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: bootstrap-icons;
+  src: url(../fonts/bootstrap-icons.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
+body {
+  font-family: "RobotoSlab";
+  font-weight: 200;
+  color: $dark;
+}
+
+header {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../images/SC+01.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .navbar {
+    height: 60px;
+    .navbar-brand {
+      font-size: 1.5rem;
+      color: $light;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      padding: 3px;
+      color: $light;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      transition: border 0.2s;
+      border-bottom: 1px solid #ffffff;
+      margin-bottom: -1px;
+    }
+  }
+  .header-banner {
+    min-height: calc(100vh - 60px);
+
+    .btn {
+      font-size: 1.5rem;
+      border-radius: 2rem;
+      border: none;
+    }
+  }
+
+  .header-content {
+    z-index: 2;
+  }
+}
+
+main {
+  section {
+    padding-top: 50px;
+  }
+  .extraBold {
+    font-family: "OpenSans";
+  }
+
+  a:hover {
+    color: $danger;
+  }
+
+  .nav-link:hover {
+    cursor: pointer !important;
+  }
+}
+
+footer {
+  .foot {
+    width: 100%;
+    height: 50px;
+    background-color: $primary;
+    color: $light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .foot-nav {
+    display: flex;
+    list-style: none;
+    .foot-item {
+      margin: 0 5px;
+    }
+  }
+}
